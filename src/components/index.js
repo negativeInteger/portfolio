@@ -1,0 +1,7 @@
+export { default as Header } from './Header.jsx'
+export { default as Footer } from './Footer.jsx'
+export { default as Home } from './Home.jsx'
+export { default as ProjectCard } from './ProjectCard.jsx'
+export { default as Projects } from './Projects.jsx'
+export { default as Experience } from './Experience.jsx'
+export { default as Contact } from './Contact.jsx'
