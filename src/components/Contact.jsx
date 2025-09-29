@@ -3,12 +3,12 @@ import { useRef, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 
-const VITE_EMAILJS_API_KEY = import.meta.env.VITE_EMAILJS_API_KEY;
-const VITE_EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const VITE_EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_API_KEY = import.meta.env.EMAILJS_API_KEY;
+const EMAILJS_SERVICE_ID = import.meta.env.EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.EMAILJS_TEMPLATE_ID;
  
 emailjs.init({
-  publicKey: VITE_EMAILJS_API_KEY
+  publicKey: EMAILJS_API_KEY
 })
 
 
@@ -28,8 +28,8 @@ export default function ContactPage() {
   const onSubmit = (data) => {
      emailjs
       .sendForm(
-        VITE_EMAILJS_SERVICE_ID,      // your Service ID
-        VITE_EMAILJS_TEMPLATE_ID,     // your Template ID
+        EMAILJS_SERVICE_ID,      // your Service ID
+        EMAILJS_TEMPLATE_ID,     // your Template ID
         formRef.current,
       )
       .then((data) => setStatus('Message sent successfully!'))
